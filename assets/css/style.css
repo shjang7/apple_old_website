@@ -1,20 +1,27 @@
 
-@media screen and (min-width: 2010px) {
-  .overlay {
-    /* top */
+
+@media screen and (min-width: 1440px) {
+
+}
+@media screen and (min-width: 1080px) {
+  header .top-bar {
+    height: 70px!important;
+  }
+  main .overlay {
+    margin-top: 60px!important;
   }
 }
-
-@media screen and (max-width: 800px) {
-  .bg-shot {
-    /*background: #55f url('https://web.archive.org/web/20140228114747im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg') 50% 110vh no-repeat;*/
+@media screen and (max-width: 1080px) {
+  .overlay {
+    width: 95%!important;
+    margin-left: 2%!important;
   }
-  .rest-shot:nth-child(n+3) {
-    /*display: none;*/
+  .menu-bar {
+    margin-left: 0!important;
   }
 }
 .container {
-  width: 100vw;
+  width: 98.5vw;
   height: inherit;
   min-width: 1080px;
   max-width: 1440px;
@@ -22,9 +29,8 @@
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
-
-  /*background-color: yellow;*/
-  border: 1px black solid;
+  /*background-color: yellow; /*temp*/
+  /*border: 1px black solid; /*temp*/
 }
 /*100vw*/
 main {
@@ -33,6 +39,8 @@ main {
 }
 
 main .back {  /* width, height inherit */
+  position: relative;
+  z-index: -5;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 200px;
@@ -41,23 +49,19 @@ main .back {  /* width, height inherit */
   grid-template-areas:
     "bg bg bg bg"
     "rt1 rt2 rt3 rt4";
-  /*grid-gap: 3px; /* it is not for ie*/
-  z-index: -5;
   box-sizing: border-box;
   /*background-color: #f77;/*temp*/
 }
 
 .back .bg-shot {
-  grid-area : bg;
   -ms-grid-row: 1;
-  -ms-grid-column-start: 1;
-  -ms-grid-column-end: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area : bg;
   grid-column: 1/5;
 
-  width: 100vw;
-  min-width: 1080px;
-  max-width: 1440px;/*for ie*/
-  height:80vh;
+  width: 100%;
+  height:69vh;
   min-height: 520px;
   max-height: 1180px;
 
@@ -65,7 +69,7 @@ main .back {  /* width, height inherit */
   margin-right: 2px;
   margin-bottom: 2px;
   /*background: #55f url('https://web.archive.org/web/20140228114747im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg') 50% 100% no-repeat;*/
-  background-color: #aaf;/*temp*/
+  background-color: #ccf;/*temp*/
 }
 
 .rest-shot {
@@ -76,9 +80,11 @@ main .back {  /* width, height inherit */
   /*width:24.7%; /* for ie 10 */
   height:200px;
   display: inline-block;
-  margin-right: 1px;
   box-sizing: border-box;
   /*background-color: #ff8; /*temp*/
+}
+.rest-shot:nth-last-child(n+2) {
+  margin-right: 1px;
 }
 .box-1 {
   -ms-grid-column:1;
@@ -105,19 +111,23 @@ main .back {  /* width, height inherit */
   /*background-color: #5f5; /*temp*/
 }
 
-
 main .overlay {
   position: absolute;
-  left:20%;
-  top: 12%;
-  width:60%;
-  height:30%;
+  width:100%; /*980px;*/
+  height:45%;
   z-index: 5;
-  background-color: pink;
+  margin: 6% 0;
+  background-color: rgba(155,122,255,0.3); /*temp*/
 }
 
-#top-menu {
-/*  background-color: pink;*/
+.menu-bar {
+  width: 980px;
+  height: 33px;
+  margin: 1.8% auto;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #7ff;
 }
 
 footer {
@@ -129,14 +139,31 @@ footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
-  background-color: gray;
+  background-color: #7fa;
 }
 
-footer * {
+footer .box {
   width: 48%;
-  height: 40px;
+  height: 35px;
   display: inline-block;
-  background-color: #ee3;
-  border: 1px black solid;
+  margin: 3px;
+  background-color: #ee3;/*temp*/
+}
+
+header {
+  width: 100%;
+  background-color: yellow;/*temp*/
+}
+
+header .top-bar {
+  position: fixed;
+
+    width: 98.5vw;
+    height: 63px;
+    min-width: 1080px;
+    max-width: 1440px;
+  z-index: 10;
+  background-color: rgba(255,200,200,0.5);
 }
