@@ -126,8 +126,8 @@ main .back {  /* width, height inherit */
   display: block;
   margin-right: 2px;
   margin-bottom: 2px;
-  background-color: #55f;/*temp*/
-  /*background: #55f url('https://web.archive.org/web/20140228114747im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg') 50% 100% no-repeat;*/
+  /*background-color: #55f;/*temp*/
+  background: #55f url('https://web.archive.org/web/20140228114747im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg') 50% 100% no-repeat;
 
 }
 
@@ -142,28 +142,34 @@ main .back {  /* width, height inherit */
   box-sizing: border-box;
   /*background-color: #ff8; /*temp*/
 }
-.rest-shot:nth-last-child(n+2) {
-  margin-right: 1px;
+
+.rest-shot:nth-child(n+2) {
+  margin-left: 1px;
 }
+
 .box-1 {
   -ms-grid-column:1;
   grid-area: rt1;
   background-color: #f77;/*temp*/
+  background: #5f5 url('https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_iphone5s_2x.jpg') 50%/cover no-repeat;
 }
+
 .box-2 {
   -ms-grid-column:2;
   grid-area: rt2;
-  background-color: #af7;/*temp*/
+  background: #5f5 url('https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_iphone5c.jpg') 50%/cover no-repeat;
 }
+
 .box-3 {
   -ms-grid-column:3;
   grid-area: rt3;
-  background-color: #f7f;/*temp*/
+  background: #5f5 url('https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_30_years.jpg') 50%/cover no-repeat;
 }
+
 .box-4 {
   -ms-grid-column:4;
   grid-area: rt4;
-  background-color: #7ff;/*temp*/
+  background: #5f5 url('https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_supplier_responsibility.jpg') 50%/cover no-repeat;
 }
 
 .rest-shot:nth-child(2n) {
