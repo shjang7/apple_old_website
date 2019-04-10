@@ -1,9 +1,13 @@
 
 
-@media screen and (min-width: 1440px) {
-
-}
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1080px) {  /*add 1440*/
+  .overlay {
+    width: 100%!important;
+    margin-left: 0!important;
+  }
+  .menu-bar {
+    margin: 1.8% auto!important;
+  }
   header .top-bar {
     height: 70px!important;
   }
@@ -11,15 +15,7 @@
     margin-top: 60px!important;
   }
 }
-@media screen and (max-width: 1080px) {
-  .overlay {
-    width: 95%!important;
-    margin-left: 2%!important;
-  }
-  .menu-bar {
-    margin-left: 0!important;
-  }
-}
+
 .container {
   width: 98.5vw;
   height: inherit;
@@ -113,17 +109,17 @@ main .back {  /* width, height inherit */
 
 main .overlay {
   position: absolute;
-  width:100%; /*980px;*/
+  width:96%; /*980px;*/
   height:45%;
   z-index: 5;
-  margin: 6% 0;
+  margin: 6% 2%;
   background-color: rgba(155,122,255,0.3); /*temp*/
 }
 
 .menu-bar {
   width: 980px;
   height: 33px;
-  margin: 1.8% auto;
+  margin: 1.8% 0;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
