@@ -1,5 +1,30 @@
 
 
+.f-xl {
+  font-size: 80px;
+  line-height: 120px;
+}
+
+.f-l {
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.f-m {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.f-s {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.f-xs {
+  font-size: 12px;
+  line-height: 18px;
+}
+
 @media screen and (min-width: 1080px) {  /*add 1440*/
   .overlay {
     width: 100%!important;
@@ -31,6 +56,7 @@
 /*100vw*/
 main {
   position: relative;
+  font: 300 12px/18px 'Open Sans', sans-serif;
   /*background-color: yellow; /*temp*/
 }
 
@@ -125,6 +151,13 @@ main .overlay {
   box-sizing: border-box;
   background-color: #7ff;
 }
+
+.text-set {
+  width: 100%;
+  height: 100%;
+  margin: 100px 150px;
+}
+
 
 footer {
   position: relative;
