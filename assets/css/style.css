@@ -8,7 +8,7 @@
 }
 
 .f-xl {
-  font-size: 80px;
+  font-size: 70px;
   line-height: 120px;
 }
 
@@ -31,6 +31,14 @@
   font-size: 12px;
   line-height: 18px;
 }
+a {
+  color: rgb(50,50,255);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 
 @media screen and (min-width: 1080px) {  /*add 1440*/
   .overlay {
@@ -45,6 +53,12 @@
   }
   main .overlay {
     margin-top: 60px!important;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .top-bar .items-1st .logo,
+  .top-bar .items-1st .graph {
+    display: none;
   }
 }
 
@@ -140,7 +154,7 @@ main .back {  /* width, height inherit */
 main .overlay {
   position: absolute;
   width:96%; /*980px;*/
-  height:45%;
+  height:inherit;
   z-index: 5;
   margin: 6% 2%;
   background-color: rgba(155,122,255,0.3); /*temp*/
@@ -148,7 +162,7 @@ main .overlay {
 
 .menu-bar {
   width: 980px;
-  height: 34px;
+  height: 35px;
   margin: 1.8% 0;
   display: flex;
   justify-content: center;
@@ -162,6 +176,7 @@ main .overlay {
   border: none;
   background-color: rgba(100,100,100,0); /*for ie*/
   color: inherit;
+  text-align: center;
 }
 
 .menu-bar button {
@@ -170,12 +185,14 @@ main .overlay {
 }
 
 .menu-bar button:hover {
+  cursor: pointer;
   background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.2) 100%);
 }
 
-.text-set {
+.overlay .text-set {
   width: 80%;
-  height: 80%;
+  height: 100%;
+  min-width: 1000px;
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
@@ -183,12 +200,16 @@ main .overlay {
 }
 
 .text-set .text {
+  width: 900px;
   height: inherit;
-  margin: 20px;
+  margin: 5px auto;
   display: block;
-  background-color: pink;
+  text-align: center;
 }
-
+.text-set .text:nth-child(1) {
+  /*  font: 300 80px/18px 'Open Sans', sans-serif;
+*/
+}
 
 footer {
   position: relative;
@@ -224,5 +245,60 @@ header .top-bar {
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: rgba(255,200,200,0.5);
+  display: flex;
+  flex-flow: row nowrap;
+  box-sizing: border-box;
+  background-color: rgba(247,249,251,0.5);
+}
+.top-bar .items-1st {
+  width: 1000px;
+  height: inherit;
+  display: -ms-none;
+  /*display: -ms-grid;*/
+  display: grid;
+  -ms-grid-template-columns: 1fr 1fr 4fr 1fr;
+  -ms-grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2,1fr) 4fr 1fr;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas:
+    "logo search search date"
+    "logo text-box graph date ";
+}
+
+.items-1st .logo {
+  grid-area: logo;
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  margin: 10px;
+}
+.items-1st .search {
+  grid-area: search;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  -ms-grid-row: 1;
+
+  height: 40%;
+  display: inline;
+}
+.items-1st .text {
+  grid-area: text-box;
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  display: inline;
+}
+.items-1st .graph {
+  grid-area: graph;
+  -ms-grid-column: 3;
+  -ms-grid-row: 2;
+}
+.items-1st .date {
+  grid-area: date;
+  -ms-grid-column: 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+}
+
+.items-1st input {
+  width: 600px;
 }
