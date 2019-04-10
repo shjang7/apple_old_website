@@ -49,7 +49,7 @@ a:hover {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 1080px) {  /*add 1440*/
+@media screen and (min-width: 1180px) {  /*add 1440*/
   .overlay {
     width: 100%!important;
     margin-left: 0!important;
@@ -64,7 +64,8 @@ a:hover {
     margin-top: 60px!important;
   }
 }
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 1180px) {
   .top-bar .items-1st .logo,
   .top-bar .items-1st .graph {
     display: none;
