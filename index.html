@@ -19,7 +19,7 @@
   </head>
   <body class="container">
     <header>
-      <div class="top-bar">
+      <div class="top-items">
         <div class="items-1st">
           <img class="logo" src="./assets/images/wayback-toolbar-logo.png" alt="Sorry. Image didn't upload"/>
           <div class="search">
@@ -34,24 +34,31 @@
           <img class="date" src="./assets/images/date-indicator.png" alt="Sorry. Image didn't upload" />
         </div>
         <div class="items-2nd">
-          <div class="icons">
-            <i class="far fa-user-circle"></i>
-            <i class="f-c-sky fas fa-question-circle"></i>
-            <i class="f-c-gray far fa-window-close"></i>
-            <i class="f-c-blue fab fa-facebook"></i>
-            <i class="f-c-sky fab fa-twitter-square"></i>
+          <div class="icons f-s">
+            <a href="#"><i class="far fa-user-circle">
+            </i></a>
+            <a href="#"><i class="f-c-sky fas fa-question-circle">
+            </i></a>
+            <a href="#"><i class="f-c-gray far fa-window-close">
+            </i></a>
+            <a href="#"><i class="f-c-blue fab fa-facebook">
+            </i></a>
+            <a href="#"><i class="f-c-sky fab fa-twitter-square">
+            </i></a>
           </div>
-          <div class="about">
+          <a href="#" class="about">
             <i class="fas fa-caret-down"></i>
             About this capture
-          </div>
+          </a>
         </div>
-      </div> <!-- top-bar -->
+      </div> <!-- top-items -->
     </header>
     <main>
       <div class="overlay f-c-white">
         <nav class="menu-bar f-s">
-          <button>apple</button>
+          <button>
+            <i class="fab fa-apple"></i>
+          </button>
           <button>Store</button>
           <button>Mac</button>
           <button>iPod</button>
@@ -59,7 +66,10 @@
           <button>iPod</button>
           <button>iTunes</button>
           <button>Support</button>
-          <input type="text" />
+          <div class="search">
+            <i class="fas fa-search"></i> 
+            <input type="text" />
+          </div>
         </nav>
         <div class="text-set" >
           <div class="text f-xl">What will your verse be?</div>
